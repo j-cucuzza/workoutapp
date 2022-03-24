@@ -11,7 +11,9 @@ import {
 } from '@ionic/react';
 
 import { useLocation } from 'react-router-dom';
-import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
+import { barbellOutline, barbellSharp, bodyOutline, bodySharp, 
+  fileTrayFullOutline, fileTrayFullSharp, gridOutline, gridSharp, 
+  walkOutline, walkSharp } from 'ionicons/icons';
 import './Menu.css';
 
 interface AppPage {
@@ -22,41 +24,41 @@ interface AppPage {
 }
 
 const appPages: AppPage[] = [
+  // {
+  //   title: 'Favorites',
+  //   url: '/page/Favorites',
+  //   iosIcon: heartOutline,
+  //   mdIcon: heartSharp
+  // },
   {
-    title: 'Inbox',
-    url: '/page/Inbox',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
+    title: 'Muscle Groups',
+    url: '/page/MuscleGroups',
+    iosIcon: bodyOutline,
+    mdIcon: bodySharp
   },
   {
-    title: 'Outbox',
-    url: '/page/Outbox',
-    iosIcon: paperPlaneOutline,
-    mdIcon: paperPlaneSharp
+    title: 'Equipment',
+    url: '/page/Equipment',
+    iosIcon: barbellOutline,
+    mdIcon: barbellSharp
   },
   {
-    title: 'Favorites',
-    url: '/page/Favorites',
-    iosIcon: heartOutline,
-    mdIcon: heartSharp
+    title: 'Generate Workout',
+    url: '/page/Workouts',
+    iosIcon: gridOutline,
+    mdIcon: gridSharp
   },
   {
-    title: 'Archived',
-    url: '/page/Archived',
-    iosIcon: archiveOutline,
-    mdIcon: archiveSharp
+    title: 'Cardio',
+    url: '/page/Cardio',
+    iosIcon: walkOutline,
+    mdIcon: walkSharp
   },
   {
-    title: 'Trash',
-    url: '/page/Trash',
-    iosIcon: trashOutline,
-    mdIcon: trashSharp
-  },
-  {
-    title: 'Spam',
-    url: '/page/Spam',
-    iosIcon: warningOutline,
-    mdIcon: warningSharp
+    title: 'All Workouts',
+    url: '/page/AllWorkouts',
+    iosIcon: fileTrayFullOutline,
+    mdIcon: fileTrayFullSharp
   }
 ];
 
@@ -83,6 +85,7 @@ const Menu: React.FC = () => {
           })}
         </IonList>
 
+        {/* Don't need this right now
         <IonList id="labels-list">
           <IonListHeader>Labels</IonListHeader>
           {labels.map((label, index) => (
@@ -91,7 +94,7 @@ const Menu: React.FC = () => {
               <IonLabel>{label}</IonLabel>
             </IonItem>
           ))}
-        </IonList>
+        </IonList> */}
       </IonContent>
     </IonMenu>
   );

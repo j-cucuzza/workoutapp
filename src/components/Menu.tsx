@@ -32,13 +32,13 @@ const appPages: AppPage[] = [
   // },
   {
     title: 'Muscle Groups',
-    url: '/page/MuscleGroups',
+    url: '/MuscleGroups',
     iosIcon: bodyOutline,
     mdIcon: bodySharp
   },
   {
     title: 'Equipment',
-    url: '/page/Equipment',
+    url: '/Equipment',
     iosIcon: barbellOutline,
     mdIcon: barbellSharp
   },

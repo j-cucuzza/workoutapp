@@ -1,11 +1,11 @@
 import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
+import React from 'react'
 import Menu from './components/Menu';
 import Page from './pages/Page';
-import MuscleGroups from './pages/MuscleGroups';
-import Equipment from './pages/Equipment';
-
+import CardList from './pages/CardList';
+import * as api from './util/api'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -29,6 +29,8 @@ import './theme/variables.css';
 setupIonicReact();
 
 const App: React.FC = () => {
+
+
   return (
     <IonApp>
       <IonReactRouter>
@@ -42,10 +44,18 @@ const App: React.FC = () => {
               <Page />
             </Route>
             <Route path="/MuscleGroups" exact={true}>
-              <MuscleGroups />
+              <CardList
+                  group={'Muscle Group'}
+                  getOptions={api.getMuscles}
+                  getExercises={api.getExerciseByMuscle}
+                />
             </Route>
             <Route path="/Equipment" exact={true}>
-              <Equipment />
+              <CardList
+                  group={'Equipment'}
+                  getOptions={() => api.getEquipment()}
+                  getExercises={() => api.getExerciseByEquipment(0)} 
+                />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>

@@ -33,6 +33,8 @@ const callApi = ( endpoint: string, reqParams: RequestParams = defaultRequestPar
                 return resp.json()
             } else if (resp.status === 402) {
                 return { message: 'Limit Exceeded'}
+            } else {
+                return 
             }
         })
 }
@@ -40,6 +42,8 @@ const callApi = ( endpoint: string, reqParams: RequestParams = defaultRequestPar
 
 /**
  * Get list of muscle groups
+ * 
+ * @returns json formatted list of equipment
  */
 const getMuscles = () =>
     callApi('muscles', {})
@@ -47,18 +51,26 @@ const getMuscles = () =>
 
 /**
  * Get list of equipment
+ * 
+ * @returns jons formatted list of equipment
  */
 const getEquipment= () =>
     callApi('equipment', {})
 
 /**
  * Get list of exercises by muscle groups
+ * 
+ * @param id index of the muscle id to filter by
+ * @returns json formatted list of exercises
  */
 const getExerciseByMuscle = (id: Number) =>
     callApi('exercises/' + id, {})
 
 /**
  * Get list of exercises by equipment 
+ * 
+ * @param id index of the equipment to filter by
+ * @returns json formatted list of exercies
  */
 const getExerciseByEquipment = (id: Number) =>
     callApi('equipment/' + id, {})

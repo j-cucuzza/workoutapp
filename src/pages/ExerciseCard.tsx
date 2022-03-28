@@ -4,9 +4,12 @@ import {
     IonCardContent,
     IonCardTitle,
     IonImg,
+    IonCardSubtitle,
 
 } from '@ionic/react';
 import { Exercise } from '../types';
+import titleCase from '../util/titlecase';
+
 
 
 type ExerciseCardProps =
@@ -25,7 +28,8 @@ const ExerciseCard = (props: ExerciseCardProps) => {
 
         
         <IonCardHeader>
-            <IonCardTitle>{props.ex.name}</IonCardTitle>
+            <IonCardSubtitle>{titleCase(props.ex.bodyPart)}: {titleCase(props.ex.target)}</IonCardSubtitle>
+            <IonCardTitle>{titleCase(props.ex.name)}</IonCardTitle>
         </IonCardHeader> 
     </IonCard>
     )

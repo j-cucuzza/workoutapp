@@ -53,8 +53,8 @@ const App: React.FC = () => {
             <Route path="/Equipment" exact={true}>
               <CardList
                   group={'Equipment'}
-                  getOptions={() => api.getEquipment()}
-                  getExercises={() => api.getExerciseByEquipment(0)} 
+                  getOptions={api.getEquipment}
+                  getExercises={api.getExerciseByEquipment} 
                 />
             </Route>
           </IonRouterOutlet>

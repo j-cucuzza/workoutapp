@@ -44,19 +44,19 @@ const appPages: AppPage[] = [
   },
   {
     title: 'Generate Workout',
-    url: '/page/Workouts',
+    url: '/GenerateWorkout',
     iosIcon: gridOutline,
     mdIcon: gridSharp
   },
   {
     title: 'Cardio',
-    url: '/page/Cardio',
+    url: '/Cardio',
     iosIcon: walkOutline,
     mdIcon: walkSharp
   },
   {
     title: 'All Workouts',
-    url: '/page/AllWorkouts',
+    url: '/',
     iosIcon: fileTrayFullOutline,
     mdIcon: fileTrayFullSharp
   }

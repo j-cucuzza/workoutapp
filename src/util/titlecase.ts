@@ -10,7 +10,6 @@ const titleCase = (phrase: String) => {
         if (words[i][0] === '(' || !words[i][0]){
             break
         }
-        console.log(words[i])
         words[i] = words[i][0].toUpperCase() + words[i].substring(1)
     }
     return words.join(' ')

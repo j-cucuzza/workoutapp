@@ -43,7 +43,7 @@ const callApi = ( endpoint: string, reqParams: RequestParams = defaultRequestPar
 /**
  * Get list of muscle groups
  * 
- * @returns json formatted list of equipment
+ * @returns json formatted list of muscles
  */
 const getMuscles = () =>
     callApi('muscles', {})
@@ -52,10 +52,26 @@ const getMuscles = () =>
 /**
  * Get list of equipment
  * 
- * @returns jons formatted list of equipment
+ * @returns json formatted list of equipment
  */
 const getEquipment= () =>
     callApi('equipment', {})
+
+
+/**
+ * Get list of body parts
+ * 
+ * @returns json formatted list of bodyparts
+ */
+const getBodyParts = () =>
+    callApi('bodyparts', {})
+
+
+
+
+
+
+
 
 /**
  * Get list of exercises by muscle groups
@@ -77,11 +93,10 @@ const getExerciseByEquipment = (id: Number) =>
 
 
 
-
 export {
     getMuscles,
     getExerciseByMuscle,
     getEquipment,
     getExerciseByEquipment,
-    
+    getBodyParts
 }

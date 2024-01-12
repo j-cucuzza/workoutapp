@@ -42,24 +42,24 @@ const appPages: AppPage[] = [
     iosIcon: barbellOutline,
     mdIcon: barbellSharp
   },
-  {
-    title: 'Generate Workout',
-    url: '/GenerateWorkout',
-    iosIcon: gridOutline,
-    mdIcon: gridSharp
-  },
-  {
-    title: 'Cardio',
-    url: '/Cardio',
-    iosIcon: walkOutline,
-    mdIcon: walkSharp
-  },
-  {
-    title: 'All Workouts',
-    url: '/',
-    iosIcon: fileTrayFullOutline,
-    mdIcon: fileTrayFullSharp
-  }
+  // {
+  //   title: 'Generate Workout',
+  //   url: '/GenerateWorkout',
+  //   iosIcon: gridOutline,
+  //   mdIcon: gridSharp
+  // },
+  // {
+  //   title: 'Cardio',
+  //   url: '/Cardio',
+  //   iosIcon: walkOutline,
+  //   mdIcon: walkSharp
+  // },
+  // {
+  //   title: 'All Workouts',
+  //   url: '/',
+  //   iosIcon: fileTrayFullOutline,
+  //   mdIcon: fileTrayFullSharp
+  // }
 ];
 
 // const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];

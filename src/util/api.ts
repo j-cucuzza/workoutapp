@@ -1,4 +1,4 @@
-const API_ROOT = 'https://wty83i.deta.dev/'
+const API_ROOT = 'https://workoutbackend1-7e33bfti.b4a.run/api/'
 
 
 enum ApiMethod {

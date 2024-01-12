@@ -56,12 +56,12 @@ const App: React.FC = () => {
                   getExercises={api.getExerciseByEquipment} 
                 />
             </Route>
-            <Route path="/Cardio" exact={true}>
+            {/* <Route path="/Cardio" exact={true}>
               <TestPage/>
             </Route>
             <Route path='/GenerateWorkout' exact={true}>
               <GenerateWorkout />
-            </Route>
+            </Route> */}
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactHashRouter>
